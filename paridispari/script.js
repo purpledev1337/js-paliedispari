@@ -9,6 +9,13 @@ if (userBet == "pari" || userBet == "dispari") {
 
 let userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
 
+if (userNum <= 1 || userNum >= 5) {
+    alert("Puoi scegliere solo tra 1 e 5!"), location.reload();
+} else {
+    console.log("Il numero scelto dall'utente è:", userNum);
+}
+
+
 /* Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). */
 function randomNum(max) {
     let randomNum = Math.floor(Math.random() * max) + 1;
@@ -26,13 +33,11 @@ console.log("La somma dei due numeri è:", addictionNum);
 /* Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) */
 
 function isEven(num) {
-    let result = false;
     if (num % 2 == 0) {
-    result = true;
+    return true;
     } else {
-    result = false;
+    return false;
     }
-    return result;
 }
 
 const addictionIsEven = isEven(addictionNum);
