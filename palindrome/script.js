@@ -11,15 +11,15 @@ function palindrome(wordToCheck) {
         if (wordToCheck[i] !== wordToCheck[wordToCheck.length - 1 - i]) {
             return false;
         }
-        return true;
     }
+    return true;
 }
 // 3.  Dare l’output relativo.
 // 3.1 Assegno una variabile al risultato della funzione applicata alla parole dell'utente
 let isPalindrome = palindrome(userWord)
 
 // 3.2 Stampo un output se il risutato è vero e l'altro output se è falso
-if (isPalindrome = false) {
+if (!isPalindrome) {
     console.log(`La parola ${userWord} non è palindroma!`);
 } else {
     console.log(`La parola ${userWord} è palindroma!`);
