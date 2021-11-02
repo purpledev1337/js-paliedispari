@@ -9,7 +9,7 @@ if (userBet == "pari" || userBet == "dispari") {
 
 let userNum = parseInt(prompt("Inserisci un numero tra 1 e 5"));
 
-if (userNum <= 1 || userNum >= 5) {
+if (userNum < 1 || userNum > 5) {
     alert("Puoi scegliere solo tra 1 e 5!"), location.reload();
 } else {
     console.log("Il numero scelto dall'utente è:", userNum);
